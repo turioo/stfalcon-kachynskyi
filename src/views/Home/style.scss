@@ -1,0 +1,167 @@
+@import '@/assets/scss/_vars.scss';
+.home {
+  &-wrapper {
+    width: 100%;
+    height: calc(100vh - 95px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+    &:after {
+      content: 'choose';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      font-weight: 900;
+      font-size: 16vw;
+      color: $white;
+      opacity: 0.2;
+      pointer-events: none;
+      text-transform: uppercase;
+      animation: text-change 3s infinite linear;
+
+      @keyframes text-change {
+        0% {
+          content: 'choose';
+        }
+        33% {
+          content: 'watch';
+        }
+        66% {
+          content: 'enjoy';
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-container {
+    max-width: $container;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__form {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+      -webkit-box-shadow: 0px 0px 20px 3px rgba(255,255,255,0.58);
+      box-shadow: 0px 0px 20px 3px rgba(255,255,255,0.58);
+      border-radius: 8px;
+      .input-row {
+        overflow: hidden;
+        width: 75%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 8px 0 0 8px;
+        input:focus ~ label,
+        input:not([value='']) ~ label {
+          top: 10px;
+          left: 16px;
+          font-size: 11px;
+          line-height: 14px;
+          opacity: 1;
+
+          svg {
+            margin-right: 5px;
+            width: 12px;
+            height: 12px;
+          }
+        }
+        input {
+          width: 100%;
+          background: #ffffff;
+          outline: none;
+          border: 2px solid transparent;
+          font-style: normal;
+          font-weight: 400;
+          transition: all 0.3s ease;
+          height: 64px;
+          padding: 24px 16px 8px 16px;
+          font-size: 18px;
+          line-height: 32px;
+          &.error {
+            border: 2px solid #ff554a;
+            background: #fff2f0;
+          }
+          &:disabled {
+            background: #e3e5e8;
+          }
+
+        }
+        label {
+          display: flex;
+          align-items: center;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 32px;
+          top: 16px;
+          color: $grey;
+          position: absolute;
+          pointer-events: none;
+          left: 16px;
+          transition: all 0.3s ease;
+          svg {
+            transition: all 0.3s ease;
+            margin-right: 11px;
+          }
+        }
+      }
+      button {
+        display: block;
+        flex: 1;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        padding: 12px 50px;
+        background: $grey;
+        border-radius: 0 8px 8px 0;
+        overflow: hidden;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        &:hover {
+          border: 2px solid $white;
+          background: transparent;
+          color: $white;
+        }
+      }
+    }
+  }
+}
