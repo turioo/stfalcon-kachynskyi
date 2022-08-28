@@ -12,13 +12,18 @@
             v-bind:key="movie"
             class="movies-list-item__wrap"
           >
-            <div class="movies-list-item">
-              <img :src="movie.Poster" alt="poster" />
+            <router-link
+              :to="{ name: 'movie', params: { id: movie.imdbID } }"
+              class="movies-list-item"
+            >
+              <div class="item-img">
+                <img :src="movie.Poster" alt="poster" />
+              </div>
               <div class="item-info">
                 <h3 class="item-info__title">{{ movie.Title }}</h3>
                 <p class="item-info__year">{{ movie.Year }}</p>
               </div>
-            </div>
+            </router-link>
           </Slide>
           <template #addons>
             <Navigation />

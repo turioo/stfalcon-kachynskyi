@@ -8,7 +8,12 @@
         <router-link to="/">Search</router-link>
         <router-link to="/form">Suggest your film</router-link>
       </nav>
-      <a class="header-container__contact" href="/">Contact Us</a>
+      <a
+        class="header-container__contact"
+        href="https://t.me/turio_o"
+        target="_blank"
+        >Contact Us</a
+      >
     </div>
   </header>
 </template>

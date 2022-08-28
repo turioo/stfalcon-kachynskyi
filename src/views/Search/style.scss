@@ -41,6 +41,11 @@
     padding: 0 64px;
     .movies-list {
       &-item {
+        transition: all 0.3s ease;
+        padding: 10px;
+        &:hover {
+          background: rgba(66, 66, 66, 0.8);
+        }
         &__wrap {
           padding: 0 32px;
           display: flex;
@@ -50,10 +55,14 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        img {
+        .item-img {
           width: 100%;
-          height: 461px;
-          object-fit: contain;
+          height: 450px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
         }
         h3 {
           color: $white;
@@ -62,6 +71,7 @@
         p {
           color: $white;
           font-size: 18px;
+          margin-bottom: 0;
         }
       }
     }

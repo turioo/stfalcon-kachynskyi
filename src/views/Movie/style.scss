@@ -1,0 +1,55 @@
+@import '@/assets/scss/_vars.scss';
+.movie {
+  &-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 95px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-container {
+    max-width: $container;
+    width: 100%;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .movie {
+      &-img {}
+      &-info {
+        max-width: 800px;
+        color: $white;
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+}
