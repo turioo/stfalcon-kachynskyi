@@ -5,9 +5,15 @@
         <img src="@/assets/img/home-bg.png" alt="background" />
       </div>
       <div class="home-container">
-        <form class="home-container__form">
+        <form class="home-container__form" @submit="findMovie">
           <div class="input-row">
-            <input type="text" id="search" name="search" value="" />
+            <input
+              type="text"
+              id="search"
+              name="search"
+              v-model="search"
+              required
+            />
             <label for="search">
               <svg
                 width="24"
