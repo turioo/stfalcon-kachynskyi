@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home/index.vue";
 import Search from "../views/Search/index.vue";
 import Movie from "../views/Movie/index.vue";
+import Form from "../views/Form/index.vue";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: "movie",
     component: Movie,
     params: true,
+  },
+  {
+    path: "/form",
+    name: "form",
+    component: Form,
   },
 ];
 
