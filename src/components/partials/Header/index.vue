@@ -14,6 +14,32 @@
         target="_blank"
         >Contact Us</a
       >
+      <div class="header-container__hamburger" @click="open = !open">
+        <div id="nav-icon3" v-bind:class="{ open: open }">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="mobilemenu" v-bind:class="{ open: open }">
+      <div class="mobilemenu-wrapper">
+        <div class="mobilemenu-container">
+          <div class="mobilemenu-buttons" @click="open = false">
+            <router-link to="/" class="navbar-items__item">Search</router-link>
+            <router-link to="/form" class="navbar-items__item"
+              >Suggest your film</router-link
+            >
+            <a
+              class="navbar-items__item"
+              href="https://t.me/turio_o"
+              target="_blank"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </template>

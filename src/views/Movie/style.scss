@@ -37,6 +37,7 @@
     }
   }
   &-back {
+    padding: 0;
     color: $white;
     font-family: inherit;
     font-size: 24px;
@@ -79,6 +80,38 @@
         color: $white;
         text-align: center;
         font-size: 18px;
+      }
+    }
+  }
+}
+
+//-------------------- 980px ----------------------
+
+@media screen and (max-width: 980px) {
+  .movie {
+    &-wrapper {
+      min-height: calc(100vh - 65px);
+      justify-content: flex-start;
+    }
+    &-back {
+      font-size: 18px;
+    }
+    &-container {
+      padding: 20px;
+      .movie {
+        &-img {
+          max-width: 50%;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+        &-info {
+          h1 {
+            font-size: 20px;
+          }
+          font-size: 14px;
+        }
       }
     }
   }

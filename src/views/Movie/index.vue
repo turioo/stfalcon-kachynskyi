@@ -7,7 +7,7 @@
       <Loader :class="movieInfoLoading ? '' : 'hidden'" />
       <div class="movie-container" v-if="!movieInfoLoading && movieInfo">
         <button class="movie-back" @click="this.$router.back">
-          ← Return back
+          ← Return Back
         </button>
         <div class="movie-img">
           <img :src="movieInfo.Poster" alt="poster" />

@@ -6,7 +6,7 @@
       </div>
       <Loader :class="moviesListLoading ? '' : 'hidden'" />
       <div class="search-container" v-if="!moviesListLoading">
-        <Carousel v-bind="settings">
+        <Carousel v-bind="settings" :breakpoints="breakpoints">
           <Slide
             v-for="movie in moviesList"
             v-bind:key="movie"

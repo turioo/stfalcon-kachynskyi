@@ -165,3 +165,67 @@
     }
   }
 }
+
+//-------------------- 980px ----------------------
+
+@media screen and (max-width: 980px) {
+  .home {
+    &-wrapper {
+      height: calc(100vh - 65px);
+    }
+    &-bg {
+      &:after {
+        top: 25%;
+      }
+    }
+    &-container {
+      padding: 20px;
+      &__form {
+        flex-direction: column;
+        border-radius: 0;
+        .input-row {
+          width: 100%;
+          border-radius: 0;
+          position: relative;
+          input:focus ~ label,
+          input:valid ~ label {
+            top: 6px;
+            left: 16px;
+            font-size: 11px;
+            line-height: 14px;
+            opacity: 1;
+            svg {
+              margin-right: 5px;
+              width: 12px;
+              height: 12px;
+            }
+          }
+          input {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            height: 48px;
+            padding: 20px 16px 4px 16px;
+            -webkit-border-radius: 0;
+          }
+          label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #8a8d94;
+            position: absolute;
+            pointer-events: none;
+            top: 12px;
+            left: 16px;
+            svg {
+              margin-right: 11px;
+            }
+          }
+        }
+        button {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

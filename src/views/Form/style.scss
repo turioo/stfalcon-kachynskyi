@@ -206,22 +206,27 @@
     }
     &-container {
       padding: 25px;
-      &__background {
-        img {}
-      }
-      form {}
       &__title {
         font-size: 28px;
         line-height: 28px;
         margin-bottom: 40px;
       }
       &__fields {
-        .error-msg {font-size: 9px;white-space: nowrap}
-        input {
-          height: 35px;
-          font-size: 13px;
-          line-height: 15px;
-        }
+       .input-field {
+         .error-msg {font-size: 9px;white-space: nowrap}
+         input {
+           height: 35px;
+           font-size: 13px;
+           line-height: 15px;
+           -webkit-border-radius: 0;
+         }
+         &.file {
+           label {
+             font-size: 13px;
+             line-height: 15px;
+           }
+         }
+       }
       }
       &__button {
         font-size: 15px;

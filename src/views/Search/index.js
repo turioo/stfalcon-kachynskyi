@@ -10,6 +10,14 @@ export default {
       settings: {
         itemsToShow: 3,
       },
+      breakpoints: {
+        300: {
+          itemsToShow: 1,
+        },
+        700: {
+          itemsToShow: 3,
+        },
+      },
     };
   },
   mounted() {

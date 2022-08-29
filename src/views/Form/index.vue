@@ -104,7 +104,7 @@
             </div>
           </div>
         </div>
-        <button class="form-container__button">Відправити</button>
+        <button class="form-container__button">Send</button>
       </form>
     </div>
   </div>
