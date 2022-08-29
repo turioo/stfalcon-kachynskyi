@@ -39,6 +39,46 @@
     max-width: $container;
     width: 100%;
     padding: 0 64px;
+    &.error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: $white;
+      font-size: 32px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .return-back {
+      padding: 0;
+      color: $white;
+      font-family: inherit;
+      font-size: 24px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      align-self: center;
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: $white;
+        transition: width 0.3s ease;
+      }
+    }
     .movies-list {
       &-item {
         transition: all 0.3s ease;
@@ -107,6 +147,12 @@
       max-width: $container;
       width: 100%;
       padding: 20px 40px;
+      h1 {
+        font-size: 24px;
+      }
+      .return-back {
+        font-size: 18px;
+      }
       .movies-list {
         &-item {
           display: flex;

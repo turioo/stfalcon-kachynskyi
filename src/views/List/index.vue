@@ -5,7 +5,10 @@
         <img src="@/assets/img/search-bg.png" alt="background" />
       </div>
       <Loader :class="moviesListLoading ? '' : 'hidden'" />
-      <div class="search-container" v-if="!moviesListLoading">
+      <div
+        class="search-container"
+        v-if="!moviesListLoading && moviesList && moviesList.length > 0"
+      >
         <Carousel v-bind="settings" :breakpoints="breakpoints">
           <Slide
             v-for="movie in moviesList"
@@ -29,6 +32,15 @@
             <Navigation />
           </template>
         </Carousel>
+      </div>
+      <div
+        class="search-container error"
+        v-if="!moviesListLoading && !moviesList"
+      >
+        <h1>No matches found</h1>
+        <button class="return-back" @click="this.$router.back">
+          ← Return Back
+        </button>
       </div>
     </div>
   </div>
