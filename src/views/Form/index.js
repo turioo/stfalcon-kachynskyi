@@ -1,3 +1,4 @@
+// core
 import { required, minLength } from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core";
 import { VueTheMask } from "vue-the-mask";

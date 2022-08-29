@@ -1,3 +1,4 @@
+// core
 import axios from "axios";
 
 export const movieStore = {

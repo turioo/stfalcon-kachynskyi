@@ -1,6 +1,9 @@
+// core
 import { createRouter, createWebHistory } from "vue-router";
+
+// views
 import Home from "../views/Home/index.vue";
-import Search from "../views/Search/index.vue";
+import List from "../views/List/index.vue";
 import Movie from "../views/Movie/index.vue";
 import Form from "../views/Form/index.vue";
 
@@ -13,7 +16,7 @@ const routes = [
   {
     path: "/search",
     name: "search",
-    component: Search,
+    component: List,
   },
   {
     path: "/movie/:id",

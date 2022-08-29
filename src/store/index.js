@@ -1,4 +1,7 @@
+// core
 import { createStore } from "vuex";
+
+// modules
 import { searchStore } from "@/store/modules/search";
 import { movieStore } from "@/store/modules/movie";
 

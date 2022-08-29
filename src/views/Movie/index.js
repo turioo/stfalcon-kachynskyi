@@ -1,3 +1,4 @@
+// components
 import Loader from "@/components/partials/Loader/index.vue";
 
 export default {

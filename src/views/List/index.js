@@ -1,8 +1,9 @@
+// core
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import Loader from "@/components/partials/Loader/index.vue";
 
 export default {
-  name: "search",
+  name: "list",
   components: { Carousel, Slide, Navigation, Loader },
   data() {
     return {
